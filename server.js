@@ -12,7 +12,7 @@ const students = []
 
 const app = express()
 app.use(express.json())
-app.use('/style', express.static(path.join(__dirname, '/public/styles.css')))
+app.use('/style', express.static('./public/styles.css'))
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
